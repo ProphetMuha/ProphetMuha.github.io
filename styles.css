@@ -6,52 +6,54 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body{
-    background-color:#f4f4f9;
-}
 
-/* 2. Header & Container Layout */
-.header{
-    background-color:#1a1a2e;
-    display:flex;
+/*  Navbar Container Styling */
+.navbar {
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
-    position: fixed;
-    top:0;
-    width:100%;
-    z-index: 1000%
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #333; /* Dark grey background */
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.logo a{
-    color:#ffffff;
+/* Logo Styling */
+.logo a {
+    color: #ffffff;
     font-size: 24px;
-    font-weight: 700;
+    font-weight: bold;
     text-decoration: none;
-    letter-spacing: 1px;
 }
 
-/* 4. Navigation Links Layout */
+/* Navigation Links List Structure */
 .nav-links{
-  list-style: none;
-  display:flex;
-  gap:20px;
+    display: flex;
+    list-style: none;
 }
 
-.nav-links li a{
-    color:cbd5e1;
+/* Spacing between individual menu links */
+.nav-links li{
+    padding: 0 15px;
+}
+
+/* Individual Link Typography and Spacing */
+.nav-links a{
+    color: #efefef;
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
 }
 
-/* Hover & Active States */
-.nav-links li a:hover,
-.nav-links li a.active{
-  color: #ffffff;
-  background-color: #0f3460;
+/* Hover Effect for Links */
+.nav-links a: hover {
+    color: #04AA6D; /* Changes color to an accent green on hover */
+}
+
+/* Styled indicator for the current active page link */
+.nav-links a.active {
+    color: #04AA6D;
+    font-weight: bold;
 }
