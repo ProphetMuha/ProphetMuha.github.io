@@ -2,9 +2,174 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Computer Servers</title>
+
+    <!--Connects this page to the styles stylesheet -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!--Website Header and Main Navigation -->
+    <header class="header">
+        <div class="logo">
+            <a href="home-page.html">Servers Home-Page</a>
+        </div>
 
+        <nav class="nav-list">
+            <ul class="nav-list">
+                <li><a href="home-page.html" class="active">Home</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="types.html">Server Types</a></li>
+                <li><a href="concepts.html">Key Concepts</a></li>
+                <li><a href="resources.html">References</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Homepage Introduction -->
+        <section class="hero" id="introduction">
+            <div class="hero-text">
+                <p class="label">IT 3203 Research Project</p>
+
+                <h1>Understanding Computer Servers</h1>
+
+                <p>
+                    Computer Servers have made many of the digital services people use every day. They store information,
+                    host websites, run applications, and even connect users across networks. This website explores and explains the history,
+                    different types, key concepts, and importance of servers
+                </p>
+
+                <a href="#contents" class="button">Explore the Website</a>
+            </div>
+
+            <img
+                    src="images/server%20room.jpeg"
+                    alt="Rows of computers servers"
+                    class="hero-image"
+            >
+        </section>
+
+        <section class="content-section">
+            <h2>Important Key Terms</h2>
+
+            <div class="card-container">
+                <article class="card">
+                    <h3>Server</h3>
+                    <p>
+                        A computer system that provides information, resources,
+                        or services for other computers.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Client</h3>
+                    <p>
+                        A device or program that requests information or service from a server.
+
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Cloud Computing</h3>
+                    <p>
+                        The delivery of storage, software, and resources
+                        for computing over the internet.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Table of Contents -->
+        <section class="content-section" id="contents">
+            <h2>Table of Contents</h2>
+
+            <ol class="contents-list">
+                <li>
+                    <a href="history.html">History of Servers</a>
+                    <p>Learn how servers evolved over time.</p>
+                </li>
+
+                <li>
+                    <a href="types.html">Type of Servers</a>
+                    <p>Explore common server types and their purposes.</p>
+                </li>
+
+                <li>
+                    <a href="concepts.html">Key Concepts</a>
+                    <p>Understand important terms relating to servers.</p>
+                </li>
+
+                <li>
+                    <a href="resources.html">References and Resourcing</a>
+                    <p>View the sources and learning resources used.</p>
+                </li>
+
+                <li>
+                    <a href="about.html">About the Author and Project</a>
+                    <p>Learn more about the student and projects.</p>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Required HTML table -->
+        <section class="content-section">
+            <h2>Common Server Examples</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Server Type</th>
+                            <th>Main Purposes</th>
+                            <th>Example Use</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Web Server</td>
+                            <td>Delivers website content</td>
+                            <td>Loading a webpage</td>
+                        </tr>
+
+                        <tr>
+                            <td>File Server</td>
+                            <td>Stores and shares files</td>
+                            <td>Loading a webpage</td>
+                        </tr>
+
+                        <tr>
+                            <td>Database Server</td>
+                            <td>Stores organized data</td>
+                            <td>Customer account information</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <div class="back-to-top">
+            <a href="#">Back to Top </a>
+        </div>
+    </main>
+
+<footer class="footer">
+    <div>
+        <h2>Understanding Computer Servers</h2>
+        <p>A student researching project about servers</p>
+    </div>
+
+    <div>
+        <p>
+            Class Project for
+            <a href="https://ksuweb.github.io/IT3203/" target="_blank">
+                IT 3203
+            </a>
+        </p>
+
+        <p>&copy; 2026 Muhammed Ndure</p>
+    </div>
+</footer>
 </body>
 </html>
