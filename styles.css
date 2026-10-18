@@ -204,6 +204,32 @@ main {
     font-size: 13px;
     font-weight: bold;
 }
+/* Groups the label, heading, and description */
+.section-heading{
+    margin-bottom: 25px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e1e8ef;
+}
+.section-heading h2{
+    margin: 5px 0 10px;
+}
+.section-heading > p:last-child{
+    max-width: 750px;
+    margin-bottom: 0;
+    color: #5f6f7e;
+}
+
+.section-label{
+    margin: 0 0 6px;
+
+    color: #267cbd;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
 /* Table of contents */
 .contents-list li {
     margin-bottom: 16px;
@@ -404,8 +430,328 @@ tbody tr:last-child td{
     background-color: #142d4c;
     transform: translateY(-2px);
 }
+/* Main Server Type Cards */
+.server-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 22px;
+    margin-top:25px;
+}
 
+.server-card{
+    padding:24px;
+    background-color:#f7fafc;
+    border: 1px solid #d3dee7;
+    border-radius: 9px;
+    transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease,
+            border-color 0.2s ease;
+}
 
+.server-card:hover{
+    transform: translateY(-4px);
+    border-color: #267cb5;
+    box-shadow: 0 8px 20px rgba(20,45,76,0.12);
+}
+
+.server-card h3{
+    margin: 13px 0 8px;
+    color: #A9A9A9;
+    font-size: 21px;
+}
+
+.server-icon{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 52px;
+    height: 38px;
+    padding: 0 10px;
+
+    color: white;
+    background-color: #267cb5;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-left: 3px solid lightblue;
+}
+
+.server-example{
+    margin-bottom: 0;
+    padding: 11px;
+    background-color: #eaf5fc;
+    border-left: 3px solid #3fa9f5;
+}
+
+/* Physical, Virtual and Cloud Server Cards */
+.infrastructure-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+.infrastructure-card{
+    padding: 24px;
+    background-color: #142d4c;
+    color: #e8f0f7;
+    border-radius: 9px;
+}
+.infrastructure-card >span{
+    color: #8dd2ff;
+    font-size: 13px;
+    font-weight: bold;
+}
+.infrastructure-card h3{
+    margin-bottom: 4px;
+    color: white;
+}
+.infrastructure-card h4{
+    margin-bottom: 4px;
+    color:#8dd2ff;
+}
+.infrastructure-card p:last-child{
+    margin-top:0;
+    margin-bottom: 0;
+}
+
+/* Mobile Layout for Server Types Page */
+@media (max-width: 800px) {
+    .server-grid,
+    .infrastructure-grid{
+        grid-template-columns: 1fr;
+    }
+}
+/*Key Concepts Layout */
+.concept-grid{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 22px;
+}
+.concept-card{
+    padding: 24px;
+    background-color: #f7fafc;
+    border: 1px solid #d3dee7;
+    border-top: 4px solid #267cb5;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.concept-card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(20,45,76,0.12);
+}
+.concept-card h3{
+    margin: 4px 0 10px;
+    color: #142d4c;
+}
+.concept-number{
+    color: #267cb5;
+    font-size: 13px;
+    font-weight: bold;
+}
+.concept-example{
+    padding: 10px;
+    background-color: #eaf5fc;
+    border-left: 3px solid #3fa9f5;
+}
+
+/* Client-Server Process List */
+.process-list{
+    margin: 25px 0 0;
+    padding: 0;
+    list-style: none;
+}
+.process-list li{
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 18px;
+    padding: 18px;
+    background-color: #f7fafc;
+    border: 1px solid #d3dee7;
+    border-radius: 8px;
+}
+.process-list li > span{
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+
+    width: 38px;
+    height: 38px;
+
+    color: white;
+    background-color: #267cb5;
+    font-weight: bold;
+    border-radius: 50%;
+}
+.process-list h3{
+    margin: 0;
+    color: darkblue;
+}
+.process-list p{
+    margin: 4px 0 0;
+}
+
+/* Reference Page */
+.reference-list{
+    display: grid;
+    gap: 14px;
+}
+.reference-entry{
+    padding: 18px 22px;
+    background-color: #f7fafc;
+    border-left: 4px solid #267cb5;
+    border-radius: 5px;
+}
+.reference-entry p{
+    margin: 0;
+    padding-left: 28px;
+    text-indent: -28px;
+}
+.reference-entry a{
+    color: #267cb5;
+    overflow-wrap: anywhere;
+}
+.reference-entry a:hover{
+    color: #142d4c;
+}
+.resource-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+.resource-card{
+    padding: 22px;
+    background-color: #f7fafc;
+    border: 1px solid #d3dee7;
+    border-radius: 8px;
+}
+.resource-card h3{
+    margin-top: 0;
+    color: #142d4c;
+}
+.resource-card a{
+    color: #267cbd;
+    font-weight: bold;
+    text-decoration: none;
+}
+.resource-card a:hover{
+    color: #142d4c;
+}
+.check-list li{
+    margin-bottom: 10px;
+}
+
+/*About Page */
+.about-layout{
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    align-items: center;
+    gap: 35px;
+}
+.profile-placeholder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 160px;
+    height: 160px;
+
+    color: white;
+    background: linear-gradient(135deg,#142d4c,#3fa9f5);
+    font-size: 45px;
+    font-weight: bold;
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(20,45,76,0.2);
+}
+.about-text h2{
+    margin: 5px 0 12px;
+    color: #142d4c;
+}
+.resume-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+.resume-card{
+    padding: 22px;
+    background-color: #f7fafc;
+    border: 1px solid #d3dee7;
+    border-radius: 8px;
+}
+.resume-card h3{
+    margin-top: 0;
+    color: #267cbd;
+}
+.technology-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.technology-list span{
+    padding: 9px 15px;
+    color: #25313d;
+    background-color: #eaf5fc;
+    border: 1px solid #bdd7e7;
+    border-radius: 20px;
+    font-weight: bold;
+}
+.contact-box{
+    margin: 35px 0;
+    padding: 35px;
+    color: white;
+    background: linear-gradient(135deg,#142d4c,#267cbd);
+    border-radius: 10px;
+    text-align: center;
+}
+.contact-box h2{
+    margin-top: 0;
+}
+.contact-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+.secondary-button{
+    display: inline-block;
+    margin-top: 12px;
+    padding: 11px 20px;
+
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.secondary-button:hover{
+    color: #142d4c;
+    background-color: white;
+}
+
+/* Mobile Layout for New Pages */
+@media (max-width: 800px) {
+    .concept-card,
+    .resource-card,
+    .resume-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .about-layout{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .profile-placeholder{
+        margin: 0 auto;
+    }
+
+    .contact-buttons{
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 
 /* Footer */
