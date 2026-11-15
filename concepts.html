@@ -10,7 +10,7 @@
 
 <body>
 <!-- Main Website Header -->
-<header class="header">
+<header class="site-header">
     <div class="logo">
         <a href="index.html">Server<span>CO</span></a>
     </div>
@@ -26,7 +26,276 @@
         </ul>
     </nav>
     </header>
+
+    <main>
+        <--Page Introduction-->
+        <section class="page-banner">
+            <p class ="section-label">Key Concepts</p>
+            <h1>Understanding Server Technology</h1>
+
+            <p>
+                Learning these concepts makes it easier to understand how servers communicate,
+                store information, protect data, and
+                help provide services over computer networks.
+            </p>
+        </section>
+
+        <!--Key Concept Cards-->
+        <section class="content-section">
+            <div class="content-heading">
+                <p class="section-label">Fundamentals</p>
+                <h2>Seven Important Server Concepts</h2>
+            </div>
+
+            <div class="concept-grid">
+                <article class="concept-card">
+                    <span class="concept-number">01</span>
+                    <h3>Client-Server Model</h3>
+
+                    <p>
+                        The client-server model describes the communication between
+                        a client and server.The client sends a request,
+                        and the server processes
+                        that request and returns a response.
+                    </p>
+
+                    <p class="concept-example">
+                        <strong>Example:</strong> A browser requests a webpage from a web server.
+                    </p>
+                </article>
+
+                <article class="concept-card">
+                    <span class="concept-number">02</span>
+                    <h3>IP Address</h3>
+
+                    <p>
+                        An Internet Protocol address is a numerical identifier
+                        that's assigned to a device on a network.
+                        It helps information reach the correct device or server.
+                    </p>
+
+                    <p class="concept-example">
+                        <strong>Example:</strong> An IPv4 address may look like
+                        192.168.1.1.
+                    </p>
+                </article>
+
+                <article class="concept-card">
+                    <span class="concept-number">03</span>
+                    <h3>Domain Name System</h3>
+
+                    <p>
+                        The Domain Name System, or DNS, translates readable
+                        domain names into IP addresses that computers can use to find servers.
+                    </p>
+
+                    <p class="concept-example">
+                        <strong>Example:</strong> DNS helps browsers to locate servers
+                        that are connected to a website address.
+                    </p>
+                </article>
+
+                <article class="concept-card">
+                    <span class="concept-number">04</span>
+                    <h3>Operating Systems</h3>
+
+                    <p>
+                        A server operating system manages hardware, software, users,
+                        files, network connections, and security settings.
+                    </p>
+
+                    <p class="concept-example">
+                        <strong>Example:</strong> Linux and Windows Server.
+                    </p>
+                </article>
+
+                <article class="concept-card">
+                    <span class="concept-number">05</span>
+                    <h3>Virtualization</h3>
+
+                    <p>
+                       Virtualization allows one physical computer to operate
+                        multiple virtual servers.
+                        Each virtual server can run
+                        its own operating systems and applications.
+                    </p>
+
+                    <p class="concept-example">
+                        <strong>Benefit:</strong> Organizations can use their
+                        physical equipment far more efficiently.
+                    </p>
+                </article>
+
+                <article class="concept-card">
+                    <span class="concept-number">06</span>
+                    <h3>Cloud Computing</h3>
+
+                    <p>
+                        Cloud computing provides servers, storage, software,
+                        and other computing resources through the internet.
+                        Customers can increase or decrease resources as much as needed.
+                    </p>
+
+                    <p class="concept-example">
+                        <strong>Examples:</strong> AWS, Microsoft Azure, and
+                        Google Cloud.
+                    </p>
+                </article>
+
+                <article class="concept-card">
+                    <span class="concept-number">07</span>
+                    <h3>Server Security</h3>
+
+                    <p>
+                        Server security includes the tool and procedures used
+                        to protect servers from any unauthorized access, malware, or
+                        data loss.
+                    </p>
+
+                    <p class="concept-example">
+                        <strong>Example:</strong> Firewalls, updates, strong passwords,
+                        encryption, and backups.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Request and response explanation-->
+        <section class="content-section">
+            <div class="content-heading">
+                <p class="section-label">Process</p>
+                <h2>How a Client and Server Communicate</h2>
+            </div>
+
+            <ol class="process-list">
+                <li>
+                    <span>1</span>
+                    <div>
+                        <h3>The user enters a website address</h3>
+                        <p>
+                            The user enters a domain name into a web browser.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <span>2</span>
+                    <div>
+                        <h3>DNS locates the server</h3>
+                        <p>
+                            DNS helps translate the domain name into the
+                            server's IP address.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <span>3</span>
+                    <div>
+                        <h3>The browser sends back a request</h3>
+                        <p>
+                            The client requests a webpage or another resource
+                            from the server.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <span>4</span>
+                    <div>
+                        <h3>The server responds</h3>
+                        <p>
+                            The server processes the request and sends the
+                            requested files back to the browser.
+                        </p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Concept summary table -->
+        <section class="content-section">
+            <h2>Concept Summary</h2>
+
+            <div class="table-container">
+                <table>
+                    <caption>
+                        Important concepts and their roles in server computing.
+                    </caption>
+
+                    <thead>
+                    <tr>
+                        <th scope="col">Concept</th>
+                        <th scope="col">Purpose</th>
+                        <th scope="col">Example</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <td>IP address</td>
+                        <td>Identifies a device on a network</td>
+                        <td>192.168.1.10</td>
+                    </tr>
+
+                    <tr>
+                        <td>DNS</td>
+                        <td>Connects domain names to IP addresses</td>
+                        <td>Locating a website</td>
+                    </tr>
+
+                    <tr>
+                        <td>Virtualization</td>
+                        <td>Creates virtual computer systems</td>
+                        <td>Virtual Machines</td>
+                    </tr>
+
+                    <tr>
+                        <td>Cloud Computing</td>
+                        <td>Provides resources through the internet</td>
+                        <td>Online file storage</td>
+                    </tr>
+
+                    <tr>
+                        <td>Server Security</td>
+                        <td>Protects systems and information</td>
+                        <td>Firewalls and encryption</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Links between pages-->
+        <div class="page-nav">
+            <a href="types.html">← Previous: Server Types</a>
+            <a href="resources.html">Next: References →</a>
+        </div>
+
+        <div class="back-to-top">
+            <a href="#">Back to top ↑</a>
+        </div>
+    </main>
+
+    <!-- Required class project footer -->
+    <footer class="footer">
+        <div>
+            <h2>Understanding Computer Servers</h2>
+            <p>A student research project about servers.</p>
+        </div>
+
+        <div>
+            <p>
+                Class Project for
+                <a href="https://ksuweb.github.io/IT3203/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    IT 3203
+                </a>
+            </p>
+
+            <p>&copy; 2026 Muhammed Ndure</p>
+        </div>
+    </footer>
 </body>
-
-
 </html>

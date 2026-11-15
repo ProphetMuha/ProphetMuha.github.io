@@ -17,7 +17,7 @@ body {
 }
 
 /* Header layout using Flexbox */
-.header {
+.site-header {
     position: sticky;
     top: 0;
     z-index: 9999;
@@ -171,6 +171,36 @@ main {
 .content-section h2 {
     margin-top: 0;
     color: #142d4c;
+}
+.content-heading{
+    position: static;
+    display: block;
+
+    margin-bottom: 25px;
+    padding-bottom: 16px;
+
+    background-color: transparent;
+    border-bottom: 2px solid #e1e8ef;
+    text-align: left;
+}
+
+.content-heading h2{
+    position: static;
+
+    margin: 0 0 10px;
+    color: #102a43;
+
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.content-heading > p:last-child{
+    max-width: 750px;
+    margin: 0;
+
+    color: #52606d;
+    line-height: 1.6;
 }
 
 /* Card layout using CSS Grid */
