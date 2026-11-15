@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Server Knowledge Quiz | ServerCO</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Javascript loads after the HTML has been processed -->
+
+</head>
+
+<body>
+    <!-- Main website navigation -->
+    <header class="site-header">
+        <div class="logo">
+            <a href="index.html">ServerCO</a>
+        </div>
+
+        <nav class="nav-list" aria-label="Main Navigation">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="types.html">Server Types</a></li>
+                <li><a href="concepts.html">Key Concepts</a></li>
+                <li><a href="resources.html">References</a></li>
+                <li><a href="quiz.html" class="active">Quiz</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="quiz-page">
+        <!--Quiz introduction and timer-->
+        <section class="quiz-introduction">
+            <div>
+                <p class="section-label">Self-Assessment</p>
+                <h1>Server Knowledge Quiz</h1>
+
+                <p>
+                    Test your knowledge on server types, networking,
+                    virtualization, cloud computing, and security.
+                </p>
+
+                <p>
+                    You have 10 minutes to answer all 10 questions.
+                    A score of 70% or higher is required to pass.
+                </p>
+            </div>
+
+            <div class="timer-box" aria-live="polite">
+                <span>Time Remaining</span>
+                <strong id="timer">10:00</strong>
+            </div>
+        </section>
+
+        <!--Results appear here after submission-->
+        <section
+            id="resultsPanel"
+            class="results-panel"
+            aria-live="polite"
+            hidden>
+
+            <h2 id="overallResult"></h2>
+
+            <div class="result-summary">
+                <div>
+                    <span>Total Score</span>
+                    <strong id="totalScore"></strong>
+                </div>
+
+                <div>
+                    <span>Percentage</span>
+                    <strong id="percentageScore"></strong>
+                </div>
+
+                <div>
+                    <span>Time Spent</span>
+                    <strong id="timeSpent"></strong>
+                </div>
+            </div>
+
+            <h3>Question Results</h3>
+
+            <div id="questionResults"></div>
+        </section>
+
+        <!--Server Quiz Form-->
+        <form id="serverQuiz" class="quiz-form">
+            <!-- Question 1-->
+            <fieldset class="question-card">
+                <legend>
+                    <span class="question-number">1</span>
+                    Fill in the blank
+                </legend>
+
+                <label for="q1">
+                    A computer that provided resources or services to other
+                    computers is called a ______.
+                </label>
+
+                <input
+                    type="text"
+                    id="q1"
+                    name="q1"
+                    autocomplete="off"
+                    required
+                >
+            </fieldset>
+
+            <!--Question 2-->
+            <fieldset class="question-card">
+                <legend>
+                    <span class="question-number">2</span>
+                    Fill in the blank
+                </legend>
+
+                <label for="q2">
+                    DNS stands for ____.
+                </label>
+
+                <input
+                type="text"
+                id="q2"
+                name="q2"
+                autocomplete="off"
+                required
+                >
+            </fieldset>
+
+            <!-- Question 3: Multiple Choice-->
+            <fieldset class="question-card">
+                <legend>
+                    <span class="question-number">3</span>
+                    Which server delivers website content to a browser?
+                </legend>
+
+                <label class="choice">
+                    <input type="radio" id="q3" name="q3" value="html" required>
+                    File Server
+                </label>
+
+                <label class="choice">
+                    <input type="radio" name="q3" value="web">
+                    Web Server
+                </label>
+
+                <label class="choice">
+                    <input type="radio" name="q3" value="mail">
+                    Mail Server
+                </label>
+
+                <label class="choice">
+                    <input type="radio" name="q3" value="game">
+                    Game Server
+                </label>
+            </fieldset>
+
+            <!--Question 4: Multiple Choice-->
+            <fieldset class="question-card">
+                <legend>
+                    <span class="question-number">4</span>
+                    Which server stores and manages organized records?
+                </legend>
+
+
+            <label class="choice">
+                <input type="radio" name="q4" value="proxy" required>
+                Proxy Server
+            </label>
+
+            <label class="choice">
+                <input type="radio" name="q4" value="database">
+                Database Server
+            </label>
+
+            <label class="choice">
+                <input type="radio" name="q4" value="mail">
+                Mail Server
+            </label>
+
+            <label class="choice">
+                <input type="radio" name="q4" value="dns">
+                DNS Server
+            </label>
+        </fieldset>
+
+            <!--Question 5: Multiple Choice-->
+            <fieldset class="question-card">
+                <legend>
+                    <span class="question-number">5</span>
+                    What model best describes a device requesting resources
+                    from a server?
+                </legend>
+
+                <label class="choice">
+                    <input type="radio" name="q5" value="peer" required>
+                    Peer-only Model
+                </label>
+
+                <label class="choice">
+                    <input type="radio" name="q5" value="client-server">
+                    Client-only Model
+                </label>
+
+                <label class="choice">
+                    <input type="radio" name="q5" value="offline">
+                    Offline Model
+                </label>
+
+                <label class="choice">
+                    <input type="radio" name="q5" value="mainframe">
+                    Mainframe-only Model
+                </label>
+            </fieldset>
+
+            <!--Question 6: Multiple Choice-->
+            <fieldset class="question-card">
+                <legend>
+                    <span class="question-number">6</span>
+                    What allows one physical server to run
+                    several virtual servers?
+                </legend>
+
+                <label class="choice">
+                    <input type="radio" name="q6" value="encryption" required>
+                    Encryption
+                </label>
+
+                <label class="choice">
+                    <input type="radio" name="q6" value="virtualization">
+                    Virtualization
+                </label>
+
+                <label class="choice">
+                    <input type="radio" name="q6" value="authentication">
+                    Authentication
+                </label>
+
+                <label class="choice">
+                    <input type="radio" name="q6" value="compression">
+                    Compression
+                </label>
+            </fieldset>
+
+            <!--Question 7: Dropdown-->
+            <fieldset class="question-card">
+                <legend>
+                    <span class="question-number">7</span>
+                    Which server delivers computing resources throughout the
+                    internet?
+                </legend>
+
+                <label for ="q7">Select one answer:</label>
+
+                <select id="q7" name="q7" required>
+                    <option value="">Choose one answer</option>
+                    <option value="physical">Physical Server</option>
+                    <option value="cloud">Cloud Server</option>
+                    <option value="file">File Server</option>
+                    <option value="print">Print Server</option>
+                </select>
+            </fieldset>
+
+            <!-- Question 8: Multiple Choice-->
+            <fieldset class="question-card">
+                <legend>
+                    <span class="question-number">8</span>
+                    Which server sends, receives, and stored emails?
+                </legend>
+
+                <label class="choice">
+                    <input type="radio" name="q8" value="web" required>
+                    Web Server
+                </label>
+
+                <label class="choice">
+                    <input type="radio" name="q8" value="game">
+                    Game Server
+                </label>
+
+                <label class="choice">
+                    <input type="radio" name="q8" value="mail">
+                        Mail Server
+                </label>
+
+                <label class="choice">
+                    <input type="radio" name="q8" value="file">
+                    File Server
+                </label>
+            </fieldset>
+
+            <!--Question 9: Multiple Choice-->
+            <fieldset class="question-card">
+                <legend>
+                    <span class="question-number">9</span>
+                    Select all practices that improve server security.
+                </legend>
+
+                <p class="question-instruction">
+                    More than one answer is correct.
+                </p>
+
+                <label class="choice">
+                    <input type="checkbox" name="q9" value="firewall">
+                    Use a firewall
+                </label>
+
+                <label class="choice">
+                    <input type="checkbox" name="q9" value="encryption">
+                    Encrypt sensitive information
+                </label>
+
+                <label class="choice">
+                    <input type="checkbox" name="q9" value="shared-password">
+                    Give every user the same password
+                </label>
+
+                <label class="choice">
+                    <input type="checkbox" name="q9" value="backups">
+                    Create regular backups
+                </label>
+            </fieldset>
+
+            <!--Question 10: Multiple Choice-->
+            <fieldset class="question-card">
+                <legend>
+                    <span class="question-number">10</span>
+                    Which option describes an actual computer with its own processor,
+                    memory, and storage?
+                </legend>
+
+                <label class="choice">
+                    <input type="radio" name="q10" value="virtual">
+                    Virtual Server
+                </label>
+
+                <label class="choice">
+                    <input type="radio" name="q10" value="physical">
+                    Physical Server
+                </label>
+
+                <label class="choice">
+                    <input type="radio" name="q10" value="dns">
+                    DNS Server
+                </label>
+            </fieldset>
+
+            <div class="quiz-button">
+                <button type="submit" id="submitQuiz" class="submit-button">
+                    Submit Quiz
+                </button>
+
+                <button type="button" id="resetQuiz" class="reset-button">
+                    Retake Quiz
+                </button>
+            </div>
+        </form>
+    </main>
+
+<footer class="footer">
+    <div>
+        <h2>Understanding Computer Servers</h2>
+        <p>A student research project about server technology.</p>
+    </div>
+
+    <div>
+        <p>
+            Class project for
+            <a
+                    href="https://ksuweb.github.io/IT3203/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+            >
+                IT 3203
+            </a>
+        </p>
+
+        <p>&copy; 2026 Muhammed Ndure</p>
+    </div>
+</footer>
+</body>
+</html>
