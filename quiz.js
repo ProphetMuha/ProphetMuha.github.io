@@ -173,11 +173,20 @@ function normalizeText(text){
 
 //Get an answer selected by the user//
 function getUserAnswer(question){
-    if (question.type ==="text"){
-        return quizForm.elements[question.name].value.trim();
+    const control = quizForm.elements[question.name];
+
+    // Read dropdown selections.
+    if (control && control.tagName === "SELECT") {
+        return control.value;
     }
 
-    if(question.type==="multiple"){
+    // Read typed answers.
+    if (question.type === "text") {
+        return control.value.trim();
+    }
+
+    // Read all selected checkboxes.
+    if (question.type === "multiple") {
         return Array.from(
             quizForm.querySelectorAll(
                 `input[name="${question.name}"]:checked`
@@ -185,20 +194,13 @@ function getUserAnswer(question){
         ).map(input => input.value);
     }
 
-    const selectedControl = quizForm.querySelector(
-        `[name="${question.name}"]:checked`
+    // Read the selected radio button.
+    const selected = quizForm.querySelector(
+        `input[name="${question.name}"]:checked`
     );
 
-    //Dropdown controls do not use :checked in the same way.
-    if (selectedControl) {
-        const selectControl = quizForm.elements[question.name];
+    return selected ? selected.value : "";
 
-        if (selectControl && selectControl.tagName === "SELECT") {
-            return selectControl.value;
-        }
-    }
-
-    return selectedControl ? selectedControl.value : "";
 }
 
 //Determine whether an answer is correct.//
@@ -206,7 +208,9 @@ function checkAnswer(question,userAnswer){
     if(question.type==="text"){
         const normalizedAnswer = normalizeText(userAnswer);
 
-        return question.acceptedAnswers.includes(normalizedAnswer);
+        return question.acceptedAnswers.some(
+            answers => normalizeText(answers)=== normalizedAnswer
+        );
     }
 
     if(question.type==="multiple"){
