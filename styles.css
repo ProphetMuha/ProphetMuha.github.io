@@ -52,7 +52,7 @@ body {
     font-size: 11px;
 }
 /* Navigation list */
-.nav-list {
+.nav-bar {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
@@ -63,7 +63,7 @@ body {
 }
 
 /* Navigation links */
-.nav-list a {
+.nav-bar a {
     display: block;
     position: relative;
     padding: 8px 12px;
@@ -77,13 +77,13 @@ body {
 }
 
 /* Required hover effect */
-.nav-list a:hover {
+.nav-bar a:hover {
     color: #142d4c;
     background-color: #8dd2ff;
 }
 
 /* Identifies the page currently being viewed */
-.nav-list a.active {
+.nav-bar a.active {
     background-color: #ffffff;
     color: #142d4c;
 }
@@ -240,37 +240,7 @@ main {
     font-weight: bold;
 }
 /* Groups the label, heading, and description */
-.section-heading{
-    display: block;
-    position: static;
 
-    margin-bottom: 25px;
-    padding:0 0 18px;
-
-    background-color: transparent;
-    border-bottom: 1px solid #e1e8ef;
-    text-align: left;
-}
-.section-heading .section-label{
-    margin-bottom: 5px;
-}
-.section-heading h2{
-    display: block;
-
-    margin: 0 0 10px;
-    padding: 0;
-
-    color: #142d4c;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 1.25;
-
-}
-.section-heading > p:last-child{
-    max-width: 750px;
-    margin-bottom: 0;
-    color: #5f6f7e;
-}
 
 .section-label{
     display: inline-block;
@@ -299,6 +269,15 @@ main {
     color: #5f6f7e;
     font-size: 16px;
     line-height: 1.6;
+}
+
+/* Homepage learning objectives */
+.learning-list{
+    padding-left: 22px;
+}
+
+.learning-list li{
+    margin-bottom: 10px;
 }
 
 /* Table of contents */
@@ -477,6 +456,25 @@ tbody tr:last-child td{
 
 .timeline-content p{
     margin-bottom: 0;
+}
+
+.information-note{
+    margin-top: 20px;
+    padding: 16px;
+
+    color: #102a43;
+    background-color: #eaf5fc;
+    border-left: 4px solid #267cb5;
+    border-radius: 5px;
+}
+
+.source-note{
+    font-size: 14px;
+    color: #52606d;
+}
+
+.source-note a{
+    color:#165f8f ;
 }
 
 /* Links between research pages */
@@ -1195,6 +1193,15 @@ tbody tr:last-child td{
     color: white;
 }
 
+/* Makes keyboard navigation visible */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid #b45309;
+    outline-offset: 4px;
+}
+
 /* Adjusts layout for phones and smaller screens */
 @media (max-width: 800px) {
     .header,
@@ -1203,7 +1210,7 @@ tbody tr:last-child td{
         flex-direction: column;
     }
 
-    .nav-list {
+    .nav-bar {
         justify-content: center;
     }
 
