@@ -127,13 +127,6 @@ main {
     border-left: 6px solid #3fa9f5;
 }
 
-.label {
-    margin: 0;
-    color: #267cb5;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
 .hero-image {
     width: 45%;
     max-width: 500px;
@@ -241,8 +234,7 @@ main {
 }
 /* Groups the label, heading, and description */
 
-
-.section-label{
+.label{
     display: inline-block;
 
     margin: 0 0 6px;
@@ -828,7 +820,7 @@ tbody tr:last-child td{
     color: white;
 }
 
-.quiz-introduction .section-label{
+.quiz-introduction .label{
     color: #b9e3ff;
 }
 
